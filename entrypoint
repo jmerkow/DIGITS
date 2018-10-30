@@ -1,0 +1,10 @@
+set -o errexit
+set -o pipefail
+set -o nounset
+
+
+if [[ -z "$@" ]]; then
+    bash /digits-devserver
+else
+    exec "$@"
+fi
